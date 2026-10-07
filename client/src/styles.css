@@ -1,0 +1,526 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f5f7f9;
+  color: #1f2937;
+}
+a {
+  color: #176b4d;
+  text-decoration: none;
+}
+button,
+.btn {
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 16px;
+  background: #E4A724;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+}
+button:hover,
+.btn:hover {
+  background: #e6b54c;
+}
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+aside {
+  width: 245px;
+  background: #12372c;
+  color: white;
+  padding: 25px 18px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+.brand {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+.brand span {
+  color: #80cfae;
+}
+.role {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #a8c9bd;
+  margin: 0 0 30px;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+nav a {
+  color: #d8e9e3;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+nav a:hover {
+  background: #1c4b3d;
+  color: white;
+}
+.logout {
+  position: absolute;
+  bottom: 25px;
+  left: 18px;
+  right: 18px;
+  background: #E4A724;
+}
+main {
+  margin-left: 245px;
+  width: calc(100% - 245px);
+}
+header {
+  height: 76px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 17px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header div {
+  text-align: right;
+}
+header small {
+  display: block;
+  color: #89929b;
+  margin-top: 3px;
+}
+.content {
+  padding: 30px;
+  max-width: 1450px;
+  margin: auto;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.title h1 {
+  margin: 0;
+  font-size: 30px;
+}
+.title p {
+  color: #6b7280;
+  margin: 7px 0;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+.card {
+  background: white;
+  border: 1px solid #e6e9ed;
+  border-radius: 13px;
+  padding: 22px;
+  box-shadow: 0 2px 8px #00000008;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.stat strong {
+  font-size: 30px;
+}
+.stat span {
+  color: #707780;
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.card h2 {
+  margin-top: 0;
+}
+.barrow {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 13px 0;
+}
+.barrow b {
+  color: #176b4d;
+}
+.form {
+  max-width: 850px;
+}
+.form label,
+.card label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.form input,
+.form textarea,
+.form select,
+.card input,
+.card textarea,
+.card select {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  border: 1px solid #d7dce1;
+  border-radius: 8px;
+  padding: 11px;
+  font: inherit;
+  background: white;
+}
+.form textarea {
+  resize: vertical;
+}
+.search {
+  margin-bottom: 18px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  text-align: left;
+  padding: 13px 10px;
+  border-bottom: 1px solid #edf0f2;
+  font-size: 14px;
+}
+th {
+  color: #69727c;
+  background: #fafbfb;
+}
+.pill {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #e8f1ed;
+  color: #176b4d;
+  font-size: 12px;
+  font-weight: 700;
+}
+.pill.high {
+  background: #fff1d9;
+  color: #9a6500;
+}
+.pill.urgent {
+  background: #ffe2e2;
+  color: #b42318;
+}
+.pill.low {
+  background: #edf3ff;
+  color: #315a9b;
+}
+.info {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.info small {
+  display: block;
+  color: #7b8490;
+  margin-bottom: 4px;
+}
+.timeline {
+  border-left: 3px solid #b9d9cc;
+  padding: 5px 0 13px 14px;
+  margin-left: 5px;
+}
+.timeline b,
+.timeline span,
+.timeline small {
+  display: block;
+}
+.timeline span {
+  margin: 5px 0;
+  color: #555;
+}
+.timeline small {
+  color: #89929b;
+}
+.auth {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("https://jefmenguin.com/wp-content/uploads/2023/12/barangay.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.auth-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(1, 116, 95, 0.32);
+}
+
+.auth-content {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 34px;
+}
+
+.auth-title {
+  text-align: center;
+  color: white;
+  margin-bottom: 14px;
+}
+
+.auth-title h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+.auth-title h1 span {
+  color: #3fbd9b;
+}
+
+.auth-title h2 {
+  margin: 1px 0 0;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35);
+}
+
+.authbox {
+  width: 450px;
+  background: white;
+  margin: 0 auto;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  padding: 0;
+}
+
+.auth-header {
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #063d30;
+  color: white;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.auth-form {
+  padding: 26px 58px 12px;
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.auth-form label span {
+  display: block;
+  margin-bottom: 3px;
+  color: #173e35;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.auth-form input {
+  display: block;
+  width: 100%;
+  height: 16px;
+  padding: 2px 6px;
+  border: 1px solid #7e918c;
+  border-radius: 5px;
+  background: #f7f7f7;
+  outline: none;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+.auth-form input:focus {
+  border-color: #0b4d3d;
+  box-shadow: 0 0 0 1px rgba(11, 77, 61, 0.15);
+}
+
+.auth-form button {
+  display: block;
+  width: 92px;
+  height: 25px;
+  margin: 10px auto 0;
+  border: none;
+  border-radius: 5px;
+  background: #eca817;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.auth-form button:hover {
+  background: #d9940d;
+}
+
+.auth-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.forgot {
+  text-align: center;
+  margin-top: 9px;
+  color: #315fd0;
+  font-size: 6px;
+  cursor: pointer;
+}
+
+.demo {
+  text-align: left;
+  margin-top: 9px;
+  color: #74808a;
+  font-size: 6px;
+  white-space: nowrap;
+}
+
+.error {
+  margin: -5px 0 8px;
+  padding: 5px;
+  border-radius: 4px;
+  background: #ffe5e5;
+  color: #c62828;
+  text-align: center;
+  font-size: 9px;
+}
+
+@media (max-width: 600px) {
+  .auth-content {
+    padding-top: 25px;
+  }
+
+  .auth-title h1 {
+    font-size: 27px;
+  }
+
+  .auth-title h2 {
+    font-size: 15px;
+  }
+
+  .authbox {
+    width: 300px;
+  }
+}
+.error,
+.success {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.error {
+  background: #ffe9e9;
+  color: #a61b1b;
+}
+.success {
+  background: #e8f6ef;
+  color: #176b4d;
+}
+.demo {
+  font-size: 12px;
+  color: #7b8490;
+  margin-top: 15px;
+  text-align: center;
+}
+.empty {
+  text-align: center;
+  color: #7b8490;
+}
+.list {
+  display: grid;
+  gap: 15px;
+}
+.notification.read {
+  opacity: 0.7;
+}
+.smallbtn {
+  font-size: 12px;
+  padding: 7px 10px;
+  margin-top: 10px;
+}
+.secondary {
+  background: #E4A724;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 25px 0;
+}
+@media (max-width: 900px) {
+  aside {
+    width: 200px;
+  }
+  main {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+  .content {
+    padding: 20px;
+  }
+  table {
+    display: block;
+    overflow: auto;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 650px) {
+  aside {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+  .app {
+    display: block;
+  }
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
+  .logout {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+  header {
+    justify-content: flex-start;
+  }
+  .title {
+    gap: 15px;
+  }
+  .title h1 {
+    font-size: 24px;
+  }
+}
