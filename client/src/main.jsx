@@ -206,7 +206,7 @@ function Login() {
 
           <div className="auth-form">
             <label>
-              <span>Username ✉</span>
+              <span>Username</span>
               <input
                 type="text"
                 value={form.username}
@@ -221,7 +221,7 @@ function Login() {
             </label>
 
             <label>
-              <span>Password 🔑</span>
+              <span>Password</span>
               <input
                 type="password"
                 value={form.password}
