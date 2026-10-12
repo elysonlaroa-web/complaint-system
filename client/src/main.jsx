@@ -243,9 +243,6 @@ function Login() {
 
             <div className="forgot">Forgot Password?</div>
 
-            <div className="demo">
-              Demo: admin/admin123 · staff/staff123 · resident/resident123
-            </div>
           </div>
         </form>
       </div>
