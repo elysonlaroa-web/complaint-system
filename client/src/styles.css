@@ -684,3 +684,320 @@ header .user-info small {
     right: -5px;
   }
 }
+
+/* ================================
+   ADD RESIDENT BUTTON
+================================ */
+
+.add-resident-btn {
+  background: #e9a51d;
+  color: #ffffff;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.add-resident-btn:hover {
+  background: #d49312;
+}
+
+.add-resident-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ================================
+   RESIDENT FORM
+================================ */
+
+.resident-form-card {
+  margin-bottom: 24px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.resident-form-card h2 {
+  margin-bottom: 20px;
+  color: #173f32;
+}
+
+.resident-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.resident-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.resident-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d6dce1;
+  border-radius: 8px;
+  font: inherit;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.resident-form input:focus {
+  border-color: #173f32;
+}
+
+.resident-form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* ================================
+   SUCCESS AND ERROR MESSAGES
+================================ */
+
+.success-message,
+.error-message {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.success-message {
+  background: #e8f6ed;
+  color: #176b37;
+  border: 1px solid #b8e4c5;
+}
+
+.error-message {
+  background: #fdecec;
+  color: #a12424;
+  border: 1px solid #f5c2c2;
+}
+
+/* ================================
+   RED DEACTIVATION BUTTON
+================================ */
+
+.confirm-delete-btn {
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.confirm-delete-btn:hover {
+  background: #b91c1c;
+}
+
+.confirm-delete-btn:active {
+  transform: scale(0.97);
+}
+
+.confirm-delete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ================================
+   CANCEL BUTTON
+================================ */
+
+.cancel-delete-btn {
+  background: #edf0f2;
+  color: #263238;
+  border: 1px solid #d6dce1;
+  border-radius: 8px;
+  padding: 11px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cancel-delete-btn:hover {
+  background: #dfe4e7;
+}
+
+.cancel-delete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ================================
+   DEACTIVATION MODAL OVERLAY
+================================ */
+
+.delete-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(10, 25, 20, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ================================
+   DEACTIVATION MODAL
+================================ */
+
+.delete-modal {
+  background: #ffffff;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  box-sizing: border-box;
+  animation: modalAppear 0.2s ease-out;
+}
+
+.delete-modal-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fee2e2;
+  color: #dc2626;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.delete-modal-title {
+  font-size: 21px;
+  color: #1f2937;
+  margin: 0 0 14px;
+}
+
+.delete-modal p {
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.delete-modal-note {
+  color: #6b7280 !important;
+  font-size: 14px;
+}
+
+/* ================================
+   MODAL ACTION BUTTONS
+================================ */
+
+.delete-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* ================================
+   MODAL ANIMATION
+================================ */
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 650px) {
+  .resident-form {
+    grid-template-columns: 1fr;
+  }
+
+  .resident-form-actions {
+    grid-column: auto;
+    flex-wrap: wrap;
+  }
+
+  .delete-modal {
+    padding: 24px 20px;
+  }
+
+  .delete-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .delete-modal-actions button {
+    width: 100%;
+  }
+}
+
+/* Deactivate and Confirm Deactivation Buttons */
+.confirm-delete-btn {
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.confirm-delete-btn:hover {
+  background: #b91c1c;
+}
+
+.confirm-delete-btn:active {
+  background: #991b1b;
+}
+
+.confirm-delete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* FORCE STAFF AND RESIDENT DEACTIVATE BUTTONS TO RED */
+button.confirm-delete-btn,
+.confirm-delete-btn,
+button[class*="delete"],
+button[class*="deactivate"] {
+  background-color: #dc2626 !important;
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  border-color: #dc2626 !important;
+}
+
+button.confirm-delete-btn:hover,
+.confirm-delete-btn:hover,
+button[class*="delete"]:hover,
+button[class*="deactivate"]:hover {
+  background-color: #b91c1c !important;
+  background: #b91c1c !important;
+  color: #ffffff !important;
+}
